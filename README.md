@@ -26,4 +26,12 @@ Front-end site skeleton
 - Babel is a JavaScript compiler. It lets you use the latest features of the JavaScript language on older browsers by compiling ES6 (latest JavaScript) into ES5 (Vanilla JavaScript). Webpack is configured to run Babel on your code automatically
 
 6) Set up code linting
-- ...
+- This is a more advanced concept and understanding it is optional if you're new to JavaScript
+- Code linting helps maintain the code style across your codebase, while also catching most typos and bugs in your code. Normally, the team working on a project decides on the code style they want to use by choosing `eslint` rules from here: https://eslint.org/docs/rules/ and including them in an `.eslintrc` file in the main folder of the repository.
+- Alternatively, you can use a set of rules created by other companies. The industry standard is airbnb: https://www.npmjs.com/package/eslint-config-airbnb
+- For this project, I've installed a simpler set of rules published by the company I work for: https://github.com/moneyhub/eslint-config-momentumft/blob/master/react.js
+- This set of rules depends on a few other dependencies being installed:
+  - `eslint` is the package that checks if the code matches the rules defined in the `.eslintrc` file of the project
+  - `babel-eslint` lets `eslint` know the codebase is written in Babel syntax
+  - `eslint-plugin-react` - set of `eslint` rules for a `React` project. It includes a set of recommended linting rules for a `React` based project
+- When using `eslint` I would also recommend installing the `eslint` plugin into your choice of editor and enable the `autofix` option. This option enables your editor to adjust your code to match the linting rules whenever you save a file. These auto adjustments are completely safe and they won't change the way your code works. When issues in your code can't be fixed automatically, they will be left alone for you to fix
